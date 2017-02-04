@@ -1,0 +1,9 @@
+C:\Users\vacla\Documents\Visual Studio 2015\Projects\session-20170124\session-20170124Tests\bin\Debug\session-20170124Tests.dll
+C:\Users\vacla\Documents\Visual Studio 2015\Projects\session-20170124\session-20170124Tests\bin\Debug\session-20170124Tests.pdb
+C:\Users\vacla\Documents\Visual Studio 2015\Projects\session-20170124\session-20170124Tests\bin\Debug\nunit.framework.dll
+C:\Users\vacla\Documents\Visual Studio 2015\Projects\session-20170124\session-20170124Tests\bin\Debug\session-20170124.dll
+C:\Users\vacla\Documents\Visual Studio 2015\Projects\session-20170124\session-20170124Tests\bin\Debug\session-20170124.pdb
+C:\Users\vacla\Documents\Visual Studio 2015\Projects\session-20170124\session-20170124Tests\bin\Debug\nunit.framework.xml
+C:\Users\vacla\Documents\Visual Studio 2015\Projects\session-20170124\session-20170124Tests\obj\Debug\session-20170124Tests.csprojResolveAssemblyReference.cache
+C:\Users\vacla\Documents\Visual Studio 2015\Projects\session-20170124\session-20170124Tests\obj\Debug\session-20170124Tests.dll
+C:\Users\vacla\Documents\Visual Studio 2015\Projects\session-20170124\session-20170124Tests\obj\Debug\session-20170124Tests.pdb

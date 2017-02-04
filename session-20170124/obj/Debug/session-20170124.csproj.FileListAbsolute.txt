@@ -1,0 +1,5 @@
+C:\Users\vacla\Documents\Visual Studio 2015\Projects\session-20170124\session-20170124\bin\Debug\session-20170124.dll
+C:\Users\vacla\Documents\Visual Studio 2015\Projects\session-20170124\session-20170124\bin\Debug\session-20170124.pdb
+C:\Users\vacla\Documents\Visual Studio 2015\Projects\session-20170124\session-20170124\obj\Debug\session-20170124.dll
+C:\Users\vacla\Documents\Visual Studio 2015\Projects\session-20170124\session-20170124\obj\Debug\session-20170124.pdb
+C:\Users\vacla\Documents\Visual Studio 2015\Projects\session-20170124\session-20170124\obj\Debug\session-20170124.csprojResolveAssemblyReference.cache

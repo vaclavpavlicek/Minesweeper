@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace session_20170124
 {
@@ -47,15 +48,17 @@ namespace session_20170124
         public char ShowCell(int x, int y)
         {
             int CellScore = GetCellScore(x, y);
-            return viewField[x, y] ? (CellScore > 0 ? Convert.ToChar(CellScore.ToString()) : VISIBLE_CELL_WITHOUT_BOMBS_IN_NEIGHBORHOOD) : HIDDEN_CELL;
+            if (viewField[x, y])
+                return CellScore > 0 ? Convert.ToChar(CellScore.ToString()) : VISIBLE_CELL_WITHOUT_BOMBS_IN_NEIGHBORHOOD;
+            return HIDDEN_CELL;
         }
 
-        public bool CellHasAtLeastOneBombInNeighborhood(int x, int y)
+        private bool CellHasAtLeastOneBombInNeighborhood(int x, int y)
         {
             return GetCellScore(x, y) > 0;
         }
 
-        public bool IsPositionValid(int x, int y)
+        private bool IsPositionValid(int x, int y)
         {
             return x >= 0 & x < viewField.GetLength(0) && y >= 0 & y < viewField.GetLength(1);
         }
@@ -63,15 +66,11 @@ namespace session_20170124
         public void CellChoosen(int x, int y)
         {
             if (viewField[x, y])
-            {
                 return;
-            }
 
             viewField[x, y] = true;
             if (CellHasAtLeastOneBombInNeighborhood(x, y))
-            {
                 return;
-            }
 
             for (var i = x - 1; i <= x + 1; i++)
             {
@@ -106,7 +105,7 @@ namespace session_20170124
             return result;
         }
 
-        public String NextRound(int x, int y)
+        public String NextMove(int x, int y)
         {
             CellChoosen(x, y);
             if (IsBomb(x, y))
@@ -121,7 +120,7 @@ namespace session_20170124
             return GetActualViewOfField();
         }
 
-        public bool PlayerWin()
+        private bool PlayerWin()
         {
             for (var i = 0; i < viewField.GetLength(0); i++)
             {

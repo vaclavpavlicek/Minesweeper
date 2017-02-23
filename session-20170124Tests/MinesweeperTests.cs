@@ -67,21 +67,7 @@ namespace session_20170124.Tests
             var minesweeper = new Minesweeper(new[,] { { false, false, false }, { false, false, false }, { true, true, true } });
             Assert.AreEqual(0, minesweeper.GetCellScore(0, 0));
         }
-
-        [Test]
-        public void CellWithThreeBombsInNeighborhoodHasAtLeastOneBombInNeighborhood()
-        {
-            var minesweeper = new Minesweeper(new[,] { { false, false, false }, { false, false, false }, { true, true, true } });
-            Assert.IsTrue(minesweeper.CellHasAtLeastOneBombInNeighborhood(1, 1));
-        }
-
-        [Test]
-        public void CellWithoutAnyBombInNeighborhoodHasntAnyBombInNeighborhood()
-        {
-            var minesweeper = new Minesweeper(new[,] { { false, false, false }, { false, false, false }, { true, true, true } });
-            Assert.IsFalse(minesweeper.CellHasAtLeastOneBombInNeighborhood(0, 0));
-        }
-
+        
         [Test]
         public void CellWithBoombInNeighborhoodIsShownAsCellScore()
         {
@@ -125,29 +111,21 @@ namespace session_20170124.Tests
         public void ReturnsNextRoundViewRepresentationOfField()
         {
             var minesweeper = new Minesweeper(new[,] { { false, false, false }, { false, false, false }, { false, false, true } });
-            Assert.AreEqual(" 0 1 2\n0- - -\n1- 1 -\n2- - -\n", minesweeper.NextRound(1, 1));
+            Assert.AreEqual(" 0 1 2\n0- - -\n1- 1 -\n2- - -\n", minesweeper.NextMove(1, 1));
         }
 
         [Test]
         public void ReturnsGameOverOnBombChoosen()
         {
             var minesweeper = new Minesweeper(new[,] { { false, false, false }, { false, false, false }, { false, false, true } });
-            Assert.AreEqual("Game over!", minesweeper.NextRound(2, 2));
+            Assert.AreEqual("Game over!", minesweeper.NextMove(2, 2));
         }
-
+        
         [Test]
-        public void PlayerWinsWhenAllCellsWithoutBombAreShown()
+        public void ReturnsYouWinWhenAllCellsWithoutBombsAreShown()
         {
             var minesweeper = new Minesweeper(new[,] { { false, false, false }, { false, false, false }, { false, false, true } });
-            minesweeper.CellChoosen(0, 0);
-            Assert.IsTrue(minesweeper.PlayerWin());
-        }
-
-        [Test]
-        public void ReturnsYouWinWhenAllCellsWihoutBomsAreShown()
-        {
-            var minesweeper = new Minesweeper(new[,] { { false, false, false }, { false, false, false }, { false, false, true } });
-            Assert.AreEqual("You win!", minesweeper.NextRound(0, 0));
+            Assert.AreEqual("You win!", minesweeper.NextMove(0, 0));
         }
     }
 }
